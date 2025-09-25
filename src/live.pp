@@ -85,6 +85,7 @@ var
   SourceFile, ExeFile: string;
   Args: array of TProcessString;
   s:    string;
+  success: Boolean;
 begin
   if ParamCount < 1 then
   begin
@@ -124,10 +125,10 @@ begin
       begin
         WriteLn('--- Change detected. Rebuilding... ---');
 
-        RunCommand('fpc', Args, s);
+        success := RunCommand('fpc', Args, s);
         writeln(s);
 
-        if FileExists(ExeFile) then
+        if success and FileExists(ExeFile) then
         begin
           WriteLn('--- Running program ---');
           RunCommand(ExeFile, [], s);
