@@ -1,0 +1,11 @@
+{
+  "name" : "daar/fplive",
+  "version" : "1.0.0",
+  "license" : "MIT",
+  "author" : "Darius Blaszyk <dhkblaszyk@gmail.com>",
+  "description" : "A file watcher for fast CLI development",
+  "require" : {},
+  "require-dev" : {},
+  "bin" : [
+  ]
+}
